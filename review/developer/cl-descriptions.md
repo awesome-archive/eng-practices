@@ -41,6 +41,11 @@ approach. If there are any shortcomings to the approach, they should be
 mentioned. If relevant, include background information such as bug numbers,
 benchmark results, and links to design documents.
 
+If you include links to external resources consider that they may not be visible
+to future readers due to access restrictions of retention policies. Where
+possible include enough context for reviewers and future readers to understand
+the CL.
+
 Even small CLs deserve a little attention to detail. Put the CL in context.
 
 ## Bad CL Descriptions {#bad}
@@ -65,6 +70,7 @@ Here are some examples of good descriptions.
 
 ### Functionality change
 
+Example:
 > rpc: remove size limit on RPC server message freelist.
 >
 > Servers like FizzBuzz have very large messages and would benefit from reuse.
@@ -78,6 +84,7 @@ and a bit more information about the specific implementation.
 
 ### Refactoring
 
+Example:
 > Construct a Task with a TimeKeeper to use its TimeStr and Now methods.
 >
 > Add a Now method to Task, so the borglet() getter method can be removed (which
@@ -98,6 +105,7 @@ It also explains *why* this change is being made.
 
 ### Small CL that needs some context
 
+Example:
 > Create a Python3 build rule for status.py.
 >
 > This allows consumers who are already using this as in Python3 to depend on a
